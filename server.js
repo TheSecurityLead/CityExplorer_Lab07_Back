@@ -1,7 +1,10 @@
+require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const weatherData = require('./data/weather.json');
 const app = express();
 const port = 3001;
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Server is up and running!');
