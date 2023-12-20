@@ -3,6 +3,10 @@ const weatherData = require('./data/weather.json');
 const app = express();
 const port = 3001;
 
+app.get('/', (req, res) => {
+    res.send('Server is up and running!');
+  });
+
 // Forecast class definition
 class Forecast {
   constructor(date, description) {
